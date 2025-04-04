@@ -1,0 +1,33 @@
+"""
+Programa 4: Calcular promedio de notas
+
+- Escriba un programa que llene una lista de calificaciones
+"""
+
+def calcular_promedio(suma, cantidad):
+    return suma / cantidad
+
+def mostrar_calificaciones(calificaciones):
+    index = 1
+    for i in calificaciones:
+        print(f"Nota {index}: {i}") 
+        index = index + 1
+        
+
+cantidad = int(input("¿Cuantas calificaciones desea ingresar?: "))
+
+calificaciones = []
+
+suma = 0
+
+for i in range(cantidad):
+    nota = float(input("Ingrese la calificacion: "))
+    while nota < 0 or nota > 10:
+        nota = float(input("La nota no es válida. Ingrese nuevamente: "))
+
+    calificaciones.append(nota)    
+    suma = suma + nota
+
+mostrar_calificaciones(calificaciones)
+
+print(f"El promedio de las notas es {calcular_promedio(suma, cantidad)} / 10")
