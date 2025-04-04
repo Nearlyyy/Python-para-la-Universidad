@@ -1,0 +1,12 @@
+"""
+Programa 1: Cálculo de mi edad
+
+- Escriba un programa en Python que solicite el año de nacimiento y me muestre la edad de esa persona
+"""
+
+año_nacimiento = int(input("Ingrese su año de nacimiento: "))
+año_actual = 2025
+
+edad = año_actual - año_nacimiento
+
+print(f"Su edad es de {edad} años")
