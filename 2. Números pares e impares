@@ -1,0 +1,12 @@
+"""
+Programa 2: Números pares e impares
+
+- Escriba un programa de Python que me indique si un número es par o impar
+"""
+
+n = int(input("Ingrese un número: "))
+
+if n % 2 == 0:
+    print(f"{n} es par")
+else: 
+    print(f"{n} es impar")
