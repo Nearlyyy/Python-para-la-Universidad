@@ -1,0 +1,44 @@
+"""
+Programa 6: Manipulacion de Listas
+
+- Pide al usuario que ingrese una lista de números separados por comas. 
+- Convierte esa entrada en una lista de números enteros.
+- Pedir un número y eliminar los duplicados de ese número.
+- Ordena la lista resultante de menor a mayor.
+- Muestra la lista original, la lista sin duplicados y la lista ordenada.
+
+"""
+# Funcion para llenar una lista
+def llenar_lista(n):
+    numeros = []
+
+    for i in range(n):
+        numero = int(input("Ingrese un elemento: "))
+        numeros.append(numero)
+    return numeros
+
+# Eliminar los elementos de una lista
+# Esto funciona porque [:] recorre una copia de esa lista y no la original
+def eliminar_duplicados(lista, elemento):
+    print(f"Elemento {elemento} eliminado")
+    for numero in lista[:]:
+        if numero == elemento:
+            lista.remove(numero)
+
+# Funcion para ordenar la lista de menor a mayor
+def ordenar_menor_mayor(lista):
+    print("Lista ordenada de menor a mayor")
+    lista.sort(reverse = False)
+
+n = int(input("Ingrese cuantos elementos desea colocar: "))
+
+lista_numeros = llenar_lista(n)
+print(f"Lista original:\n {lista_numeros}")
+
+elemento = int(input("¿Que elemento desea eliminar?: "))
+
+eliminar_duplicados(lista_numeros, elemento)
+print(lista_numeros)
+
+ordenar_menor_mayor(lista_numeros)
+print(lista_numeros)
