@@ -1,0 +1,40 @@
+"""
+Programa 5: Manipulacion de Listas
+
+- Escriba un programa de Python que me pida llenar una lista de números enteros. El programa
+debe ser capaz de hacer lo siguiente.
+
+- Llenar una lista con los numeros pares de la lista original
+- Llenar una lista con los numeros impares de la lista original
+- Calcular la suma de todos los números pares e impares por separado
+"""
+
+# Pedir cuantos elementos debe tener mi lista
+cantidad = int(input("Ingrese la cantidad de elementos que desea en la lista: "))
+
+# Inicializar las listas y variables a usar
+lista = []
+pares = []
+impares = []
+suma_pares = 0
+suma_impares = 0
+
+# Llenado de la lista principal
+for i in range(cantidad):
+    n = int(input("Ingrese un número: "))
+    lista.append(n)
+
+# Llenado de las listas pares e impares
+for elemento in lista:
+    if elemento % 2 == 0:
+        pares.append(elemento)
+        suma_pares += elemento
+    else:
+        impares.append(elemento)
+        suma_impares += elemento
+
+# Impresion de listas obtenidas y las sumas
+print(f"Lista original: {lista}")
+print(f"Lista de pares: {pares}")
+print(f"Lista de impares: {impares}")
+print(f"Suma de pares: {suma_pares}\nSuma de impares: {suma_impares}")
